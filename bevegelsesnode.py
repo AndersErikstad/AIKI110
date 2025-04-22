@@ -17,7 +17,7 @@ class BevegelsesNode(Node):
             #venter 1 sek før pirouette
             if self.timer_pirouette:
                 self.timer_pirouette.cancel() #kansellerer eventuellt eksisterende timer
-            self.timer_pirouette = self.create_timer(1.0, self.pirouette) #lager engangs-timer
+            self.timer_pirouette = self.create_timer(1.0, self.pirouette) #lager engangs-timer (create_timer funksjon arves fra Node, om det er uklart)
         else:
             self.get_logger().info("Bryter OFF – stopper bevegelse.") #ellers status OFF
             #send stopp‐kommando
